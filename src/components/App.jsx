@@ -1,7 +1,7 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import Form from './Form/form';
-import ContactList from './Contacts/contacts';
+// import ContactList from './Contacts/contacts';
 
 class App extends React.Component {
   state = {
@@ -27,7 +27,7 @@ class App extends React.Component {
         <h1>Phonebook</h1>
         <Form onSubmit={this.formSubmitHandler} />
         <h2>Contacts</h2>
-        <ContactList onDeleteContacts={this.deletedContact} />
+        {/* <ContactList onDeleteContacts={this.deletedContact} /> */}
       </>
     );
   }
