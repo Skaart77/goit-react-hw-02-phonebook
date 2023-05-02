@@ -17,9 +17,9 @@ class Form extends Component {
     this.reset();
   };
 
-  // Ресет форми
+  //Очистка форми
   reset = () => {
-    this.setState({ name: '' });
+    this.setState({ name: '', number: '' });
   };
 
   render() {
