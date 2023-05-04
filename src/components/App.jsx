@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import Form from './Form/form';
 import ContactList from './Contacts/contacts';
 import Filter from './Filter/filter';
-
+import { Div, H1, H2 } from './app.styled';
 class App extends React.Component {
   state = {
     contacts: [],
@@ -42,16 +42,16 @@ class App extends React.Component {
     const { filter } = this.state;
 
     return (
-      <>
-        <h1>Phonebook</h1>
+      <Div>
+        <H1>Phonebook</H1>
         <Form onSubmit={this.formSubmitHandler} />
-        <h2>Contacts</h2>
+        <H2>Contacts</H2>
         <Filter value={filter} onChange={this.changeFilter} />
         <ContactList
           contacts={this.filterContacts()}
           onDeleteContacts={this.deletedContact}
         />
-      </>
+      </Div>
     );
   }
 }
